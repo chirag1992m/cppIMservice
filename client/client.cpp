@@ -112,7 +112,7 @@ int main(int argc, char *argv[]) {
 				recvfrom(client_sd, buffer, 2000, 0, (struct sockaddr *)&their_addr, &addr_len);
 				memcpy((void *)&mess, buffer, sizeof(struct im_message));
 				
-				cout<<mess.from<<": "<<mess.message;
+				cout<<endl<<mess.from<<": "<<mess.message;
 				sprintf((char *)buffer, "imc> ");
 				write(1, buffer, 5);
 			}
